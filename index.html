@@ -8,7 +8,7 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/VIN_SCANNER/ervice-worker.js')
+        navigator.serviceWorker.register('/VIN_SCANNER/service-worker.js')
           .then(function(registration) {
             console.log('Service Worker registered with scope:', registration.scope);
           })
