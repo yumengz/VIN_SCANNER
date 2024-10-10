@@ -5,22 +5,22 @@
   <title>MWATS VIN SCANNER</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="manifest" href="manifest.json">
-<script>
-
-    window.addEventListener('load', function() {
-      navigator.serviceWorker.register('service-worker.js')
-        .then(function(registration) {
-          console.log('Service Worker registered with scope:', registration.scope);
-        })
-        .catch(function(error) {
-          console.log('Service Worker registration failed:', error);
-        });
-    });
-  
-</script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function() {
+        navigator.serviceWorker.register('/service-worker.js') // <-- Verify this path!
+          .then(function(registration) {
+            console.log('Service Worker registered with scope:', registration.scope);
+          })
+          .catch(function(error) {
+            console.error('Service Worker registration failed:', error);
+          });
+      });
+    }
+  </script>
 </head>
 <body>
-  <h1>MWATS VIN SCANNER V0.2</h1>
+  <h1>MWATS VIN SCANNER V0.3</h1>
   <script>
     if ('serviceWorker' in navigator) {
       navigator.serviceWorker.register('/service-worker.js')
