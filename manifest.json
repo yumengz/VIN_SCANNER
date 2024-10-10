@@ -2,7 +2,7 @@
   "name": "MWATS VIN SCANNER",
   "short_name": "VIN SCANNER",
   "description": "VIN SCANNER FOR END OF LINE USERS",
-  "start_url": "/",
+  "start_url": "/VIN_SCANNER",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#007bff",
