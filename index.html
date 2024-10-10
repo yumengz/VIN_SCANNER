@@ -8,7 +8,7 @@
   <script>
     if ('serviceWorker' in navigator) {
       window.addEventListener('load', function() {
-        navigator.serviceWorker.register('/service-worker.js') // <-- Verify this path!
+        navigator.serviceWorker.register('/service-worker.js')
           .then(function(registration) {
             console.log('Service Worker registered with scope:', registration.scope);
           })
@@ -21,17 +21,5 @@
 </head>
 <body>
   <h1>MWATS VIN SCANNER V0.3</h1>
-  <script>
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.register('/service-worker.js')
-        .then(() => {
-          console.log('Service worker registered!');
-        })
-        .catch((error) => {
-          console.error('Error registering service worker:', error);
-        });
-    }
-  </script>
-  
 </body>
 </html>
