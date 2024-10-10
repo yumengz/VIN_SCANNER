@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="manifest" href="manifest.json">
   <script>
-    if ('serviceWorker' in navigator) {
+    
       window.addEventListener('load', function() {
         navigator.serviceWorker.register('/VIN_SCANNER/service-worker.js')
           .then(function(registration) {
@@ -16,7 +16,7 @@
             console.error('Service Worker registration failed:', error);
           });
       });
-    }
+    
   </script>
 </head>
 <body>
